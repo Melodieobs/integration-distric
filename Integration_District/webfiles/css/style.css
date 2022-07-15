@@ -403,25 +403,30 @@ footer p {
   header section img:hover {
     animation: imageMouv 2s;
   }
-  header nav {
-    position: initial;
-  }
   header nav div {
     max-width: 1000px;
     margin: auto;
   }
   header nav div ul {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     padding: 0;
   }
   header nav div ul a {
-    padding: 1rem 4rem;
-    font-size: 1rem;
+    padding: 1rem 1rem;
+    font-size: 0.75rem;
   }
   /* 3 | MAIN          */
   main .enteteDesSection {
     max-width: 850px;
+  }
+  main .enteteDesSection h2 {
+    padding-bottom: 1rem;
+  }
+  main .enteteDesSection .titrebouton {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
   }
   main .bloc {
     max-width: 700px;
@@ -459,6 +464,7 @@ footer p {
 main .dernierActualite {
     flex-direction: column;
     max-width: 850px;
+    padding: 1rem 0;
   }
   main .premierActualite .articleGauche,
 main .premierActualite .articleDroite,
@@ -472,6 +478,7 @@ main .premierActualite .articleDroite .articleSansImage,
 main .dernierActualite .articleGauche .articleSansImage,
 main .dernierActualite .articleDroite .articleSansImage {
     width: 90%;
+    padding: 0;
   }
   main .premierActualite img,
 main .dernierActualite img {
@@ -504,15 +511,51 @@ main .dernierActualite img {
     align-items: center;
   }
   footer section ul {
-    padding: 2rem 0;
+    padding: 0.5rem 0 2rem;
   }
   footer section li, footer section h3 {
     text-align: center;
     padding: 0.5rem;
   }
 }
+@media screen and (max-width: 550px) {
+  header nav {
+    position: fixed;
+    height: 40px;
+  }
+  header nav a {
+    display: none;
+  }
+  header nav div::before {
+    content: "";
+    bottom: 33%;
+    position: absolute;
+    background-color: #345765;
+    height: 2px;
+    padding: 0.3rem;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    width: 20px;
+    right: 45%;
+  }
+  header nav div::after {
+    content: "";
+    background-color: #FFFFFF;
+    position: absolute;
+    height: 2px;
+    width: 29px;
+    right: 45%;
+    bottom: 50%;
+  }
+}
 @media screen and (max-width: 400px) {
   /* 1 | HEADER        */
+  header nav div::after {
+    right: 45%;
+  }
+  header nav div::before {
+    right: 45%;
+  }
   header section h1 {
     font-size: 1.25rem;
     text-align: center;
@@ -520,7 +563,9 @@ main .dernierActualite img {
   /* 3 | MAIN          */
   main {
     padding: 0.5rem;
-    /* 4 | SECTION       */
+  }
+  main .bloc {
+    padding-bottom: 5rem;
   }
   main .bloc .carte iframe {
     border: none;
@@ -544,9 +589,6 @@ main .dernierActualite img {
   }
   main .premierActualite img, main .dernierActualite img {
     max-width: 95%;
-  }
-  main .premierActualite .articleSansImage, main .dernierActualite .articleSansImage {
-    padding: 0;
   }
   main .premierActualite .articleGauche, main .premierActualite .articleDroite, main .dernierActualite .articleGauche, main .dernierActualite .articleDroite {
     padding: 0;
@@ -574,15 +616,6 @@ main .dernierActualite img {
   main article a::after {
     font-size: 1rem;
     padding: 0.1rem 0.4rem;
-  }
-  main .enteteDesSection .titrebouton {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  main .enteteDesSection a {
-    padding: 0.5rem;
-    font-size: 0.75rem;
   }
   /* 6 | FOOTER        */
   footer section .icon-Lettre:before, footer section .icon-tel:before, footer section .icon-SigeSocial:before {

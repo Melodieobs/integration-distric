@@ -416,18 +416,16 @@ footer {
         }
         /* 2 | NAVBAR        */
         nav {
-            position: initial;
             div {
                 max-width: 1000px;
                 margin: auto;
 
                 ul {
-                    flex-direction: column;
-                    align-items: center;
+                    justify-content: center;
                     padding: 0;
                     a {
-                        padding: 1rem 4rem;
-                        font-size: 1rem;
+                        padding: 1rem 1rem;
+                        font-size: 0.75rem;
                     }
                 }
             }
@@ -437,6 +435,15 @@ footer {
     main {
         .enteteDesSection {
             max-width: 850px;
+            h2{
+                padding-bottom: 1rem;
+            }
+            .titrebouton{
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 1rem;
+            }
         }
         .bloc{
             max-width: 700px;
@@ -474,12 +481,14 @@ footer {
         .dernierActualite {
             flex-direction: column;
             max-width: 850px;
+            padding: 1rem 0;
             .articleGauche,
             .articleDroite {
                 padding: 3rem 1rem;
                 flex-direction: column;
                 .articleSansImage {
                     width: 90%;
+                    padding: 0;
                 }
             }
             img {
@@ -517,7 +526,7 @@ footer {
             align-items: center;
 
             ul {
-                padding: 2rem 0;
+                padding: 0.5rem 0 2rem;
             }
             li, h3{
                 text-align: center;
@@ -526,11 +535,53 @@ footer {
         }
     }
 }
-
+@media screen and(max-width: 550px){
+    header{
+        nav{
+            position: fixed;
+            height: 40px;
+            a{
+                display: none;
+            }
+                div{
+                    &::before{
+                        content: "";
+                        bottom: 33%;
+                        position: absolute;
+                        background-color: $bleu;
+                        height: 2px;
+                        padding: 0.3rem;
+                        border-top: 2px solid #FFFFFF;
+                        border-bottom: 2px solid #FFFFFF;
+                        width: 20px;
+                        right: 45%;
+                    }
+                    &::after{
+                        content: "";
+                        background-color: #FFFFFF;
+                        position: absolute;
+                        height: 2px;
+                        width: 29px;
+                        right: 45%;
+                        bottom: 50%;
+                    }
+                }
+        }
+    }
+    
+}
 @media screen and(max-width: 400px){
 
     /* 1 | HEADER        */
     header{
+        nav div{
+            &::after{
+            right: 45%;
+            }
+            &::before{
+                right: 45%;
+                }
+        }
         section{
             h1{
                 font-size: 1.25rem;
@@ -542,6 +593,7 @@ footer {
     main{
         padding: 0.5rem;
         .bloc{
+            padding-bottom: 5rem;
             .carte{
                 iframe{
                     border: none;
@@ -566,9 +618,6 @@ footer {
         max-width: 100%;
         img{
             max-width: 95%;
-        }
-        .articleSansImage{
-            padding: 0;
         }
         .articleGauche, .articleDroite{
             padding: 0;
@@ -597,20 +646,9 @@ footer {
                     padding: 0.1rem 0.4rem;
                 }
             }
-        }
- /* 4 | SECTION       */       
-        .enteteDesSection{
-            .titrebouton{
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            a{
-                padding: 0.5rem;
-                font-size: 0.75rem;
-            }
-        }
+        }   
     }
+    
     /* 6 | FOOTER        */
     footer{
         section .icon-Lettre:before, section .icon-tel:before, section .icon-SigeSocial:before{
