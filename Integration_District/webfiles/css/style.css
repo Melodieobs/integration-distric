@@ -1,0 +1,655 @@
+/* Table de contenue */
+/*                   */
+/* 0 | GLOBAL        */
+/* 1 | HEADER        */
+/* 2 | NAVBAR        */
+/* 3 | MAIN          */
+/* 4 | SECTION       */
+/* 5 | ARTICLE       */
+/* 6 | FOOTER        */
+/* 0 | GLOBAL        */
+@font-face {
+  font-family: "icomoon";
+  src: url("../../../Integration_District/src/font/icomoon.eot");
+  src: url("../../../Integration_District/src/font/icomoon.eot") format("embedded-opentype"), url("../../../Integration_District/src/font/icomoon.ttf") format("truetype"), url("../../../Integration_District/src/font/icomoon.woff") format("woff"), url("../../../Integration_District/src/font/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Lettre:before {
+  content: "\e900";
+  color: #34A58A;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+.icon-tel:before {
+  content: "\e901";
+  color: #34A58A;
+  font-size: 1.1rem;
+  padding-right: 1rem;
+}
+
+.icon-SigeSocial:before {
+  content: "\e902";
+  color: #fff;
+  padding-right: 1rem;
+}
+
+.icon-Lieu:before {
+  content: "\e903";
+  color: #34A58A;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../../Integration_District/src/font/lato-light-webfont.woff") format("woff"), url("../../../Integration_District/src/font/lato-light-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../Integration_District/src/font/montserrat-variableFont_wght.ttf") format("truetype"), url("../../../Integration_District/src/font/montserrat-variablefont_wght-webfont.woff") format("woff"), url("../../../Integration_District/src/font/montserrat-variablefont_wght-webfont.woff2") format("woff2");
+}
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #F6F6F6;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat";
+  letter-spacing: 0.06em;
+}
+
+a {
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+
+/* 1 | HEADER        */
+header {
+  /* 2 | NAVBAR        */
+  /* 4 | SECTION       */
+}
+header h1 {
+  padding: 6.5rem 0 3.5rem 0;
+  color: #34A58A;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+header nav {
+  position: fixed;
+  width: 100%;
+  background-color: #345765;
+  z-index: 1;
+}
+header nav div {
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+header nav div ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav div li {
+  display: flex;
+}
+header nav div li a {
+  font-family: "Lato";
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 2rem 1rem;
+  font-size: 1.25rem;
+}
+header nav div li a:hover {
+  text-decoration: underline;
+  background-color: #517d8f;
+  border-radius: 20px;
+  transition: background-color, 2s;
+}
+header section {
+  padding: 7rem 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+header section img {
+  width: 100%;
+}
+
+/* 3 | MAIN          */
+main {
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  /* 4 | SECTION       */
+}
+main p {
+  font-family: "lato";
+}
+main .bloc {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  padding-bottom: 11.3rem;
+}
+main .bloc .cordonnee a {
+  text-decoration: none;
+  display: block;
+  color: #34A58A;
+  max-width: 200px;
+}
+main .bloc .cordonnee a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+main .carte {
+  animation: slideDowndroite 5s;
+}
+main .cordonnee, main .presentation {
+  animation: slideDowngauche 5s;
+}
+main .carte h2,
+main .presentation h2 {
+  padding-bottom: 3.25rem;
+}
+main section {
+  font-size: 20px;
+}
+main section .paragraphe {
+  padding-right: 5.8rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding-bottom: 1rem;
+}
+main section .presentation {
+  max-width: 755px;
+}
+main section .adressMail,
+main section .adress, main section .telephone {
+  max-width: 750px;
+  padding: 1rem 6rem 0 0;
+  margin-bottom: 0.5rem;
+}
+main section .adress {
+  white-space: pre-line;
+}
+main section iframe {
+  border: 10px #FFFFFF solid;
+  height: 90%;
+  width: 547px;
+  border-radius: 15px;
+}
+
+.enteteDesSection {
+  max-width: 1600px;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+.enteteDesSection .titrebouton {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2.9rem 2rem;
+  color: #6B5B54;
+}
+.enteteDesSection a {
+  font-family: "Montserrat";
+  background-color: #34A58A;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.enteteDesSection a:hover {
+  background-color: #6ed1b9;
+}
+
+.premierActualite,
+.dernierActualite {
+  background-color: #FFFFFF;
+  max-width: 1600px;
+  padding-bottom: 4rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.premierActualite h3,
+.dernierActualite h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.premierActualite .articleSansImage,
+.dernierActualite .articleSansImage {
+  padding: 0 1rem;
+}
+.premierActualite img,
+.dernierActualite img {
+  width: 330px;
+  height: 300px;
+  object-fit: cover;
+}
+.premierActualite .lien,
+.dernierActualite .lien {
+  display: flex;
+  justify-content: flex-end;
+}
+.premierActualite .date,
+.dernierActualite .date {
+  padding-bottom: 2rem;
+  color: #345765;
+  font-size: 0.87rem;
+}
+.premierActualite p,
+.dernierActualite p {
+  font-size: 1.12rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* 5 | ARTICLE       */
+article {
+  position: relative;
+  padding: 0 2rem;
+  max-width: 1530px;
+  width: 50%;
+  margin: auto;
+  margin-top: 0.25rem;
+}
+article .texte {
+  position: relative;
+  height: 50%;
+  overflow: hidden;
+}
+article .texte::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -30%, rgb(255, 255, 255) 30%);
+  bottom: 0;
+  left: 0;
+}
+article a {
+  font-family: "Montserrat";
+  position: absolute;
+  text-decoration: none;
+  color: #34A58A;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  bottom: -20%;
+  right: 4%;
+}
+article a::after {
+  content: "+";
+  font-family: sans-serif;
+  font-size: 1.65rem;
+  color: #34A58A;
+  padding: 0.15rem 0.6rem;
+  margin-left: 0.5rem;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 8px rgb(173, 173, 173);
+}
+article img {
+  max-width: 60%;
+  object-fit: cover;
+  animation: slideDown 5s;
+}
+
+.articleGauche img:hover {
+  transform: scale(0.9) rotate(-10deg);
+  transition: transform, 3s;
+}
+
+.articleDroite img:hover {
+  transform: scale(0.9) rotate(10deg);
+  transition: transform, 3s;
+}
+
+.articleDroite, .articleGauche {
+  display: flex;
+}
+
+/* FOOTER                */
+footer {
+  margin-top: 3rem;
+  width: 100%;
+  background-color: #345765;
+  /* 4 | SECTION       */
+}
+footer section {
+  max-width: 1400px;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+footer section .icon-Lettre:before, footer section .icon-tel:before, footer section .icon-SigeSocial:before {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+}
+footer section ul {
+  padding: 0;
+}
+footer section h3, footer section li, footer section a {
+  color: #FFFFFF;
+  padding: 1rem 0;
+}
+footer section h3 {
+  text-decoration: underline;
+  letter-spacing: 0.06rem;
+  font-size: 1.37rem;
+}
+footer section li {
+  list-style: none;
+  font-family: "Lato";
+}
+footer section li a {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+footer section li a:hover {
+  text-decoration: underline;
+}
+footer section .logo img {
+  width: 120px;
+}
+footer p {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #FFFFFF;
+  border-top: #FFFFFF solid 2px;
+  padding: 1rem;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1050px) {
+  /* 1 | HEADER        */
+  header {
+    /* 2 | NAVBAR        */
+  }
+  header section {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+  }
+  header section h1 {
+    font-size: 40px;
+    padding: 1rem 1rem 7rem 1rem;
+    text-align: center;
+  }
+  header section img:hover {
+    animation: imageMouv 2s;
+  }
+  header nav {
+    position: initial;
+  }
+  header nav div {
+    max-width: 1000px;
+    margin: auto;
+  }
+  header nav div ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header nav div ul a {
+    padding: 1rem 4rem;
+    font-size: 1rem;
+  }
+  /* 3 | MAIN          */
+  main .enteteDesSection {
+    max-width: 850px;
+  }
+  main .bloc {
+    max-width: 700px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  main .bloc .presentation {
+    text-align: center;
+  }
+  main .bloc .presentation .paragraphe {
+    padding-right: 0;
+  }
+  main .bloc .presentation .adressMail, main .bloc .presentation .telephone {
+    padding: 0;
+  }
+  main .bloc .cordonnee {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  main .bloc .cordonnee a {
+    padding: 0.5rem;
+    max-width: 300px;
+  }
+  main .bloc iframe {
+    width: 700px;
+    max-width: 100%;
+  }
+  main .bloc .carte {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  main .premierActualite,
+main .dernierActualite {
+    flex-direction: column;
+    max-width: 850px;
+  }
+  main .premierActualite .articleGauche,
+main .premierActualite .articleDroite,
+main .dernierActualite .articleGauche,
+main .dernierActualite .articleDroite {
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+  main .premierActualite .articleGauche .articleSansImage,
+main .premierActualite .articleDroite .articleSansImage,
+main .dernierActualite .articleGauche .articleSansImage,
+main .dernierActualite .articleDroite .articleSansImage {
+    width: 90%;
+  }
+  main .premierActualite img,
+main .dernierActualite img {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  main article {
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+  main article .texte:after {
+    display: none;
+  }
+  main article a {
+    bottom: -15%;
+  }
+  main article a::after {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+  }
+  main .cordonnee {
+    text-align: center;
+  }
+  /* 6 | FOOTER        */
+  footer section {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer section ul {
+    padding: 2rem 0;
+  }
+  footer section li, footer section h3 {
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* 1 | HEADER        */
+  header section h1 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  /* 3 | MAIN          */
+  main {
+    padding: 0.5rem;
+    /* 4 | SECTION       */
+  }
+  main .bloc .carte iframe {
+    border: none;
+  }
+  main .bloc h2 {
+    font-size: 1rem;
+  }
+  main .bloc p {
+    text-align: justify;
+    padding: 0;
+    font-size: 0.75rem;
+  }
+  main .bloc .presentation {
+    text-align: center;
+  }
+  main .bloc .cordonnee {
+    font-size: 0.75rem;
+  }
+  main .premierActualite, main .dernierActualite {
+    max-width: 100%;
+  }
+  main .premierActualite img, main .dernierActualite img {
+    max-width: 95%;
+  }
+  main .premierActualite .articleSansImage, main .dernierActualite .articleSansImage {
+    padding: 0;
+  }
+  main .premierActualite .articleGauche, main .premierActualite .articleDroite, main .dernierActualite .articleGauche, main .dernierActualite .articleDroite {
+    padding: 0;
+    align-items: center;
+  }
+  main .premierActualite .articleGauche h3, main .premierActualite .articleDroite h3, main .dernierActualite .articleGauche h3, main .dernierActualite .articleDroite h3 {
+    font-size: 1.2rem;
+  }
+  main .premierActualite .articleGauche .texte, main .premierActualite .articleDroite .texte, main .dernierActualite .articleGauche .texte, main .dernierActualite .articleDroite .texte {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  main .premierActualite .articleGauche .articleSansImage, main .premierActualite .articleDroite .articleSansImage, main .dernierActualite .articleGauche .articleSansImage, main .dernierActualite .articleDroite .articleSansImage {
+    padding: 0 1rem;
+  }
+  main article {
+    width: 100%;
+    padding: 0;
+  }
+  main article a {
+    font-size: 0.75rem;
+    right: 10%;
+    bottom: -15%;
+  }
+  main article a::after {
+    font-size: 1rem;
+    padding: 0.1rem 0.4rem;
+  }
+  main .enteteDesSection .titrebouton {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  main .enteteDesSection a {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  /* 6 | FOOTER        */
+  footer section .icon-Lettre:before, footer section .icon-tel:before, footer section .icon-SigeSocial:before {
+    font-size: 0.75rem;
+  }
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  footer section li a {
+    font-size: 0.75rem;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDowndroite {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDowngauche {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageMouv {
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
